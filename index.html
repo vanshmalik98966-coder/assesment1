@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Geeta University - Combined</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial;
+            background-color: #f3f6fb;
+            scroll-behavior: smooth; /* smooth scroll */
+        }
+
+        header {
+            background: linear-gradient(to right, pink, black);
+            text-align: center;
+            padding: 20px;
+        }
+
+        header h1 {
+            background: black;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-size: 2.5em;
+            font-weight: bold;
+        }
+
+        nav a {
+            display: inline-block;
+            background: linear-gradient(to right, yellow, blue);
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+            margin: 5px;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            background: linear-gradient(to right, blue, yellow);
+            color: #fff;
+        }
+
+        .container, .card {
+            background: white;
+            margin: 30px auto;
+            padding: 20px;
+            width: 80%;
+            max-width: 900px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .container h2, .card h2 {
+            text-align: center;
+            color: #002b5c;
+            margin-bottom: 15px;
+        }
+
+        .container img, .card img {
+            width: 100%;
+            max-width: 500px;
+            display: block;
+            margin: 15px auto;
+            border-radius: 10px;
+            border: 3px solid #002b5c;
+        }
+
+        .card input, .card textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 5px 0;
+            border: 1px solid #999;
+            border-radius: 5px;
+        }
+
+        .card button {
+            width: 100%;
+            background: #002b5c;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .card button:hover {
+            background: #0056b3;
+        }
+
+        .card table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        .card th, .card td {
+            border: 1px solid #ccc;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .card th {
+            background: #002b5c;
+            color: white;
+        }
+
+        .card ul li {
+            background: #e6f0ff;
+            margin: 8px;
+            padding: 10px;
+            border-left: 5px solid #002b5c;
+        }
+
+        /* Login Section */
+        .login-header {
+            background: url('https://source.unsplash.com/1600x400/?technology,abstract') 
+                        no-repeat center center/cover;
+            height: 250px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 40px;
+            font-weight: bold;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+            border-radius: 10px;
+        }
+
+        .login-box {
+            background: white;
+            max-width: 400px;
+            margin: -50px auto 0;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+        }
+
+        .login-box h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .login-box input {
+            width: 100%;
+            padding: 12px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 16px;
+        }
+
+        .login-box button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #4facfe, #00f2fe);
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            color: white;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .login-box button:hover {
+            background: linear-gradient(135deg, #00f2fe, #4facfe);
+        }
+
+        /* Dashboard Section */
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+
+        th, td {
+            border: 1px solid #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #006400; 
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #e0ffe0; 
+        }
+
+        tr:nth-child(odd) {
+            background-color: #fff;
+        }
+
+        section {
+            width: 80%;
+            margin: 20px auto;
+            padding: 15px;
+            border: 1px solid #333;
+            border-radius: 8px;
+            background-color: #fff;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #006400;
+        }
+
+        a {
+            color: #006400;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        a:hover {
+            text-decoration: underline;
+            color: #004d00;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Geeta University</h1>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="#login">Login</a>
+        <a href="#dashboard">Dashboard</a>
+    </nav>
+</header>
+
+<!-- HOME SECTION -->
+<div id="home" class="container">
+    <h2>Welcome to Geeta University</h2>
+    <img src="https://cdn.corenexis.com/f/0fr12VLzM6h.png" alt="University Campus">
+    <p>
+        Geeta University is a modern educational institution focused on academic excellence, innovation, and skill development.
+    </p>
+</div>
+
+<!-- ABOUT SECTION -->
+<div id="about" class="container">
+    <h2>About University</h2>
+    <img src="https://cdn.corenexis.com/f/2hL7eSbSPoO.png" alt="University Building">
+    <p>
+        Geeta University is a premier institution located in Panipat, Haryana, dedicated to providing world-class education and holistic development to students across diverse disciplines.
+    </p>
+    <h3>Departments</h3>
+    <ul>
+        <li>Computer Science Engineering</li>
+        <li>Information Technology</li>
+        <li>Mechanical Engineering</li>
+        <li>Civil Engineering</li>
+        <li>Electronics & Communication</li>
+        <li>Management Studies</li>
+    </ul>
+</div>
+
+<!-- CONTACT SECTION -->
+<div id="contact" class="card">
+    <h2>Contact Us</h2>
+    <form>
+        <label>Name</label>
+        <input type="text" required>
+        <label>Email</label>
+        <input type="email" required>
+        <label>Message</label>
+        <textarea rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+
+    <h3>Contact Details</h3>
+    <table>
+        <tr>
+            <th>Office</th>
+            <th>Contact</th>
+        </tr>
+        <tr>
+            <td>Admission Office</td>
+            <td>+91 9876543210</td>
+        </tr>
+        <tr>
+            <td>Student Help Desk</td>
+            <td>+91 9876543211</td>
+        </tr>
+    </table>
+</div>
+
+<!-- LOGIN SECTION -->
+<div id="login" class="container">
+    <div class="login-header">
+        Welcome Back!
+    </div>
+    <div class="login-box">
+        <h2>Login</h2>
+        <form>
+            <input type="text" placeholder="Username" required>
+            <input type="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</div>
+
+<!-- DASHBOARD SECTION -->
+<div id="dashboard" class="container">
+    <h1>Student Information Dashboard</h1>
+
+    <table>
+        <tr>
+            <th>Roll No</th>
+            <th>Name</th>
+            <th>Course</th>
+            <th>Email</th>
+            <th>Mobile</th>
+        </tr>
+        <tr><td>101</td><td>Vansh</td><td>B.Tech CSE</td><td>vansh@example.com</td><td>9876543210</td></tr>
+        <tr><td>102</td><td>Aarav</td><td>B.Sc IT</td><td>aarav@example.com</td><td>9876543211</td></tr>
+        <tr><td>103</td><td>Riya</td><td>MCA</td><td>riya@example.com</td><td>9876543212</td></tr>
+        <tr><td>104</td><td>Karan</td><td>BBA</td><td>karan@example.com</td><td>9876543213</td></tr>
+        <tr><td>105</td><td>Simran</td><td>B.Tech ECE</td><td>simran@example.com</td><td>9876543214</td></tr>
+        <tr><td>106</td><td>Rahul</td><td>B.Com</td><td>rahul@example.com</td><td>9876543215</td></tr>
+        <tr><td>107</td><td>Ananya</td><td>B.Tech ME</td><td>ananya@example.com</td><td>9876543216</td></tr>
+        <tr><td>108</td><td>Dev</td><td>B.Sc Physics</td><td>dev@example.com</td><td>9876543217</td></tr>
+        <tr><td>109</td><td>Priya</td><td>B.Tech Civil</td><td>priya@example.com</td><td>9876543218</td></tr>
+        <tr><td>110</td><td>Arjun</td><td>MBA</td><td>arjun@example.com</td><td>9876543219</td></tr>
+    </table>
+
+    <section>
+        <h2>Subjects (Ordered List)</h2>
+        <ol>
+            <li>Data Structures</li>
+            <li>Operating Systems</li>
+            <li>Database Management</li>
+            <li>Computer Networks</li>
+            <li>Software Engineering</li>
+        </ol>
+    </section>
+
+    <section>
+        <h2>Technical Skills (Unordered List)</h2>
+        <ul>
+            <li>C++ Programming</li>
+            <li>Java</li>
+            <li>Python</li>
+            <li>HTML & CSS</li>
+            <li>SQL</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>University Website</h2>
+        <p>Visit our official site: 
+            <a href="https://www.geetauniversity.edu.in" target="_blank">Geeta University</a>
+        </p>
+    </section>
+</div>
+
+</body>
+</html>
+
